@@ -1,0 +1,146 @@
+body {
+  background-color: #ffa502;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around; /*This works only after display: flex*/
+  align-items: center;
+  padding: 15px 0;
+  background-color: #333;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+
+nav li {
+  padding: 10px 15px;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* MOBILE (default — no media query needed) */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);  /* 1 column on mobile */
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* TABLET (768px and up) */
+@media (min-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablet or computer */
+  }
+}
+
+
+.skill-card {
+  background-color: #ffb366;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;              /*makes all changes smooth (not instant and jarring)*/
+  cursor: pointer;                        /*changes the cursor to a hand when hovering (signals "clickable")*/
+}
+
+.skill-card:hover {
+  background-color: #ff9933;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);            /*lifts up slightly*/
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* MOBILE (default) */
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.skill-card {
+  font-size: 16px;
+}
+
+/* TABLET (768px and up) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+
+  .skill-card {
+  font-size: 18px;
+  } 
+}
+
+/* DESKTOP (1024px and up) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+
+  .skill-card {
+  font-size: 20px;
+  }
+}
